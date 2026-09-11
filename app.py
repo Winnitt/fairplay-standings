@@ -172,6 +172,8 @@ PAGE_HEAD = """<!doctype html>
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, viewport-fit=cover\">
     <title>{{ page_title|default('TPL Fairplay Standings') }}</title>
     <link rel=\"stylesheet\" href=\"{{ url_for('static', filename='style.css') }}\">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='kore.png') }}">
+    
 </head>
 <body>
 """
