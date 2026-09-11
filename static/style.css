@@ -1,0 +1,977 @@
+/* ============================================================
+   TPL FAIRPLAY - RESPONSIVE STYLES
+   Desktop + tablet + phone portrait + phone landscape
+   ============================================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    min-height: 100%;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+:root {
+    --navy: #071a3d;
+    --navy-2: #0d2a63;
+    --blue: #1769e0;
+    --blue-light: #eaf2ff;
+    --red: #e83b2f;
+    --green: #087443;
+    --gold: #c9972b;
+    --text: #182230;
+    --muted: #697586;
+    --line: #e7ebf2;
+    --background: #f3f5f9;
+    --white: #ffffff;
+    --shadow: 0 10px 30px rgba(8, 24, 56, .08);
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    min-width: 0;
+    min-height: 100vh;
+    font-family: Inter, "Segoe UI", Arial, sans-serif;
+    background:
+        radial-gradient(circle at 50% -10%, rgba(23, 105, 224, .08), transparent 34%),
+        var(--background);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+
+nav {
+    width: 100%;
+    min-height: 72px;
+    padding: 0 clamp(16px, 5vw, 72px);
+    background: var(--navy);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.brand {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: .4px;
+    flex-shrink: 1;
+}
+
+.nav-logo {
+    width: 210px;
+    max-width: 210px;
+    height: 54px;
+    max-height: 60px;
+    object-fit: contain;
+    display: block;
+    flex: 0 0 auto;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+.nav-links a {
+    color: rgba(255,255,255,.82);
+    font-size: 12px;
+    font-weight: 850;
+    letter-spacing: .3px;
+    padding: 10px 12px;
+    border-radius: 9px;
+    white-space: nowrap;
+    transition: .2s ease;
+}
+
+.nav-links a:hover {
+    color: #fff;
+    background: rgba(255,255,255,.10);
+}
+
+/* ============================================================
+   PAGE / HERO
+   ============================================================ */
+
+.page {
+    width: min(1180px, calc(100% - 40px));
+    margin: 30px auto 60px;
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    border-radius: 22px;
+    padding: 34px 36px;
+    margin-bottom: 18px;
+    background:
+        radial-gradient(circle at 88% 15%, rgba(51,133,255,.28), transparent 28%),
+        linear-gradient(135deg, #071a3d 0%, #0d2a63 62%, #12478e 100%);
+    box-shadow: 0 16px 40px rgba(7,26,61,.18);
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    right: -65px;
+    bottom: -90px;
+    border: 1px solid rgba(255,255,255,.13);
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 25px rgba(255,255,255,.025),
+        0 0 0 50px rgba(255,255,255,.018);
+}
+
+.eyebrow {
+    position: relative;
+    z-index: 1;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.7px;
+    opacity: .72;
+    font-weight: 900;
+    margin-bottom: 9px;
+}
+
+.hero h1 {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    font-family: "Montserrat", "Segoe UI", sans-serif;
+    font-size: clamp(30px, 4vw, 44px);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    color: #ffffff;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, .25);
+}
+
+.hero p {
+    position: relative;
+    z-index: 1;
+    margin: 11px 0 0;
+    font-family: "Montserrat", "Segoe UI", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: 0.1px;
+    opacity: .76;
+}
+
+/* ============================================================
+   CARD / STANDINGS TABLE
+   ============================================================ */
+
+.card {
+    background: var(--white);
+    border: 1px solid rgba(15,35,70,.06);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.table-wrap {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    min-width: 720px;
+}
+
+th {
+    padding: 13px 18px;
+    text-align: left;
+    background: #f7f9fc;
+    border-bottom: 1px solid var(--line);
+    color: #7a8698;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 900;
+    white-space: nowrap;
+}
+
+th:first-child {
+    padding-left: 22px;
+}
+
+td {
+    padding: 15px 18px;
+    border-bottom: 1px solid #edf0f4;
+    vertical-align: middle;
+    background: #fff;
+    font-size: 14px;
+}
+
+tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+tbody tr:hover td {
+    background: #f9fbff;
+}
+
+.rank {
+    width: 64px;
+    font-weight: 900;
+    color: #687588;
+    font-size: 13px;
+    position: relative;
+}
+
+.rank.top {
+    color: var(--gold);
+}
+
+.rank.top::before {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 24px;
+    border-radius: 4px;
+    background: var(--gold);
+    vertical-align: middle;
+    margin-right: 9px;
+}
+
+.team {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    min-width: 280px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 14px;
+    background: linear-gradient(145deg, #f8fafc, #edf1f7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 50px;
+    overflow: hidden;
+    color: var(--navy);
+    font-size: 11px;
+    font-weight: 900;
+    border: 1px solid #e4e9f0;
+}
+
+.logo img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.team-name {
+    font-weight: 850;
+    color: #172131;
+    line-height: 1.25;
+}
+
+.team-code {
+    color: #8a96a7;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    margin-top: 4px;
+}
+
+.positive {
+    color: var(--green);
+    font-weight: 850;
+}
+
+.negative {
+    color: var(--red);
+    font-weight: 850;
+}
+
+.total {
+    color: var(--navy);
+    font-size: 20px;
+    font-weight: 950;
+}
+
+/* ============================================================
+   ADMIN
+   ============================================================ */
+
+.admin-nav {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+}
+
+.admin-nav a {
+    padding: 10px 15px;
+    border-radius: 10px;
+    background: #fff;
+    border: 1px solid #e1e6ee;
+    color: #536174;
+    font-size: 12px;
+    font-weight: 850;
+    box-shadow: 0 3px 12px rgba(16,24,40,.04);
+}
+
+.admin-nav a.active {
+    background: linear-gradient(135deg, var(--navy), var(--navy-2));
+    border-color: var(--navy);
+    color: #fff;
+}
+
+.team-admin {
+    border: 1px solid #e7ebf1;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 13px;
+    background: #fff;
+    box-shadow: 0 4px 18px rgba(16,24,40,.04);
+}
+
+.team-admin-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 17px;
+}
+
+.team-admin-name {
+    font-weight: 850;
+    color: #172131;
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: var(--blue-light);
+    color: var(--blue);
+    border: 1px solid #d7e5ff;
+    font-size: 10px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .7px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.field label {
+    display: block;
+    font-size: 11px;
+    color: #687588;
+    font-weight: 800;
+    margin-bottom: 6px;
+}
+
+input {
+    width: 100%;
+    border: 1px solid #d7dde7;
+    border-radius: 10px;
+    padding: 11px 12px;
+    background: #fbfcfe;
+    color: #172131;
+    font: inherit;
+    font-size: 14px;
+    outline: none;
+}
+
+input:focus {
+    border-color: var(--blue);
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(23,105,224,.10);
+}
+
+.btn {
+    border: 0;
+    border-radius: 10px;
+    padding: 11px 18px;
+    font: inherit;
+    font-weight: 850;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #e83b2f, #c92d24);
+    color: #fff;
+}
+
+.flash {
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccebdc;
+    border-radius: 10px;
+    background: #effaf4;
+    color: #067647;
+    font-weight: 750;
+    font-size: 13px;
+}
+
+.login-box {
+    width: min(420px, calc(100% - 30px));
+    margin: 75px auto;
+}
+
+.login-box .card {
+    padding: 32px;
+    border-radius: 20px;
+}
+
+.login-box h1 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: var(--navy);
+}
+
+.login-field {
+    margin-bottom: 16px;
+}
+
+.login-field label {
+    display: block;
+    font-size: 12px;
+    color: #536174;
+    font-weight: 800;
+    margin-bottom: 7px;
+}
+
+.login-button {
+    width: 100%;
+}
+
+/* ============================================================
+   TABLET / SMALL LAPTOP
+   ============================================================ */
+
+@media screen and (max-width: 900px) {
+    .page {
+        width: calc(100% - 32px);
+        margin-top: 22px;
+    }
+
+    .hero {
+        padding: 28px 26px;
+    }
+
+    .form-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ============================================================
+   PHONE PORTRAIT
+   ============================================================ */
+
+@media screen and (max-width: 700px) and (orientation: portrait) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    nav {
+        min-height: 58px;
+        height: 58px;
+        padding: 0 12px;
+        gap: 6px;
+    }
+
+    .brand {
+        height: 58px;
+        gap: 6px;
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    .brand span {
+        display: none;
+    }
+
+    .nav-logo {
+        width: 170px;
+        max-width: 170px;
+        height: 48px;
+        max-height: 50px;
+    }
+
+    .nav-links {
+        gap: 0;
+        flex: 0 0 auto;
+    }
+
+    .nav-links a {
+        font-size: 9px;
+        padding: 7px 6px;
+        letter-spacing: 0;
+    }
+
+    .nav-links a[href="/admin"] {
+        display: none;
+    }
+
+    .page {
+        width: calc(100% - 20px);
+        margin: 12px auto 28px;
+    }
+
+    .hero {
+        padding: 21px 18px;
+        margin-bottom: 12px;
+        border-radius: 17px;
+    }
+
+    .eyebrow {
+        font-size: 8px;
+        letter-spacing: 1.35px;
+        margin-bottom: 7px;
+    }
+
+    .hero h1 {
+        font-size: clamp(23px, 7vw, 29px);
+        line-height: 1.1;
+        letter-spacing: -.45px;
+    }
+
+    .hero p {
+        font-size: 11px;
+        margin-top: 7px;
+    }
+
+    .card {
+        border-radius: 15px;
+    }
+
+    .table-wrap {
+        overflow-x: hidden;
+    }
+
+    table {
+        width: 100%;
+        min-width: 0;
+        table-layout: fixed;
+    }
+
+    th {
+        padding: 10px 3px;
+        font-size: 7px;
+        letter-spacing: .35px;
+        white-space: nowrap;
+    }
+
+    th:first-child {
+        padding-left: 8px;
+    }
+
+    td {
+        padding: 12px 3px;
+        font-size: 11px;
+        white-space: nowrap;
+    }
+
+    /* Exact six-column proportions for a phone width. */
+    th:nth-child(1),
+    td:nth-child(1) {
+        width: 12%;
+    }
+
+    th:nth-child(2),
+    td:nth-child(2) {
+        width: 36%;
+    }
+
+    th:nth-child(3),
+    td:nth-child(3) {
+        width: 12%;
+    }
+
+    th:nth-child(4),
+    td:nth-child(4) {
+        width: 14%;
+    }
+
+    th:nth-child(5),
+    td:nth-child(5) {
+        width: 13%;
+    }
+
+    th:nth-child(6),
+    td:nth-child(6) {
+        width: 13%;
+    }
+
+    .rank {
+        width: auto;
+        font-size: 10px;
+        padding-left: 8px;
+    }
+
+    .rank.top::before {
+        width: 2px;
+        height: 18px;
+        margin-right: 4px;
+    }
+
+    .team {
+        width: 100%;
+        min-width: 0;
+        gap: 6px;
+    }
+
+    .logo {
+        width: 34px;
+        height: 34px;
+        flex: 0 0 34px;
+        border-radius: 10px;
+    }
+
+    .logo img {
+        width: 29px;
+        height: 29px;
+    }
+
+    .team > div:last-child {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .team-name {
+        font-size: 10px;
+        line-height: 1.13;
+        white-space: normal;
+        overflow-wrap: anywhere;
+        word-break: normal;
+    }
+
+    /* The reference mobile layout doesn't need the secondary code. */
+    .team-code {
+        display: none;
+    }
+
+    .positive,
+    .negative {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .total {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    /* Admin pages remain usable on phones. */
+    .admin-nav {
+        gap: 5px;
+        margin-bottom: 14px;
+    }
+
+    .admin-nav a {
+        padding: 8px 10px;
+        font-size: 10px;
+    }
+
+    .team-admin {
+        padding: 14px;
+        border-radius: 14px;
+    }
+
+    .team-admin-top {
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 13px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .team-admin form > div:last-child {
+        flex-wrap: wrap;
+    }
+
+    .team-admin form > div:last-child > div,
+    .team-admin form > div:last-child .btn {
+        width: 100%;
+        flex: 1 1 100%;
+    }
+
+    .login-box {
+        width: calc(100% - 24px);
+        margin: 35px auto;
+    }
+
+    .login-box .card {
+        padding: 22px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .site-footer {
+        margin-top: 32px;
+    }
+
+    .footer-inner {
+        min-height: 78px;
+        width: calc(100% - 28px);
+        gap: 10px;
+    }
+
+    .footer-powered {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .footer-brand {
+        font-size: 20px;
+    }
+}
+
+/* ============================================================
+   VERY SMALL PHONES
+   ============================================================ */
+
+@media screen and (max-width: 400px) and (orientation: portrait) {
+
+    nav {
+        padding: 0 8px;
+    }
+
+    .nav-logo {
+        width: 145px;
+        max-width: 145px;
+        height: 44px;
+    }
+
+    .nav-links a {
+        font-size: 8px;
+        padding: 6px 4px;
+    }
+
+    .page {
+        width: calc(100% - 14px);
+        margin-top: 9px;
+    }
+
+    .hero {
+        padding: 19px 15px;
+        border-radius: 15px;
+    }
+
+    .hero h1 {
+        font-size: 22px;
+    }
+
+    th {
+        padding: 9px 2px;
+        font-size: 6.5px;
+    }
+
+    td {
+        padding: 10px 2px;
+        font-size: 10px;
+    }
+
+    .rank {
+        padding-left: 6px;
+    }
+
+    .logo {
+        width: 31px;
+        height: 31px;
+        flex-basis: 31px;
+    }
+
+    .logo img {
+        width: 27px;
+        height: 27px;
+    }
+
+    .team {
+        gap: 4px;
+    }
+
+    .team-name {
+        font-size: 9px;
+    }
+
+    .positive,
+    .negative {
+        font-size: 9px;
+    }
+
+    .total {
+        font-size: 13px;
+    }
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.site-footer {
+    width: 100%;
+    margin-top: 55px;
+    background: var(--navy);
+    color: white;
+}
+
+.footer-inner {
+    min-height: 96px;
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+
+.footer-powered {
+    color: rgba(255,255,255,.62);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+
+.footer-logo {
+    width: 300px;
+    height: auto;
+    max-height: 55px;
+    object-fit: contain;
+    display: block;
+}
+
+/* ============================================================
+   MOBILE FOOTER
+   ============================================================ */
+
+@media screen and (max-width: 700px) {
+
+    .site-footer {
+        margin-top: 32px;
+    }
+
+    .footer-inner {
+        min-height: 78px;
+        width: calc(100% - 28px);
+        gap: 10px;
+    }
+
+    .footer-powered {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .footer-logo {
+        width: 125px;
+        max-height: 42px;
+    }
+}
+/* ============================================================
+   PHONE / TABLET LANDSCAPE
+   ============================================================ */
+
+@media screen and (max-width: 900px) and (orientation: landscape) {
+
+    nav {
+        min-height: 56px;
+        height: 56px;
+        padding: 0 18px;
+    }
+
+    .brand {
+        height: 56px;
+    }
+
+    .brand span {
+        display: none;
+    }
+
+    .nav-logo {
+        width: 185px;
+        max-width: 185px;
+        height: 46px;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+        padding: 7px 8px;
+    }
+
+    .nav-links a[href="/admin"] {
+        display: none;
+    }
+
+    .page {
+        width: 94%;
+        margin: 14px auto 30px;
+    }
+
+    .hero {
+        padding: 22px 26px;
+        border-radius: 18px;
+    }
+
+    .hero h1 {
+        font-size: 29px;
+    }
+
+    table {
+        min-width: 0;
+        table-layout: fixed;
+    }
+
+    th {
+        padding: 9px 7px;
+        font-size: 8px;
+    }
+
+    td {
+        padding: 10px 7px;
+        font-size: 11px;
+    }
+
+    .team {
+        min-width: 0;
+    }
+
+    .team-code {
+        display: none;
+    }
+}
