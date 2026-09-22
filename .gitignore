@@ -25,3 +25,13 @@ instance/
 # OS
 .DS_Store
 Thumbs.db
+
+!.env.example
+
+# Node / Vite
+node_modules/
+dist/
+*.log
+
+# Cloudflare
+.wrangler/

@@ -1,0 +1,154 @@
+/* ============================================================
+   Design tokens — KoreScore brand system
+   ============================================================ */
+
+:root {
+  /* ---- Core palette ---- */
+  --color-bg: #000000;
+  --color-primary: #b3ff00;        /* neon lime — CTAs, active states, highlights */
+  --color-primary-text: #000000;   /* text ON primary-bg elements */
+  --color-secondary: #3a5af8;      /* electric blue accent */
+
+  /* ---- Surfaces (dark hierarchy) ---- */
+  --color-surface: #111111;
+  --color-surface-2: #1a1a1a;
+  --color-surface-3: #222222;
+
+  /* ---- Text ---- */
+  --color-text: #ffffff;
+  --color-text-primary: #ffffff;   /* alias */
+  --color-text-muted: #888888;
+  --color-text-secondary: #888888; /* alias */
+
+  /* ---- Borders / dividers ---- */
+  --color-neutral: #2a2a2a;
+  --color-border: #2a2a2a;
+
+  /* ---- Semantic ---- */
+  --color-error: #ff4444;
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-live: #ff4444;
+
+  /* ---- Accent alias (used for score text, highlights) ---- */
+  --color-accent: #b3ff00;
+
+  /* ---- Border radius ---- */
+  --radius-sm: 10px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 28px;
+  --radius-full: 9999px;
+
+  /* ---- Shadows ---- */
+  --shadow-1: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-2: 0 4px 16px rgba(0, 0, 0, 0.6);
+
+  /* ---- Spacing ---- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+
+  /* ---- Typography ---- */
+  --font-family: 'Inter', sans-serif;
+  --font-family-display: 'Barlow Condensed', sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* ---- Text size aliases (used by home components) ---- */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+
+  /* ---- Layout ---- */
+  --max-width: 430px;
+  --bottom-nav-height: 64px;
+  --sidebar-width: 220px;
+
+  /* ---- Theme-variant asset toggles (resolve to nearest theme scope) ---- */
+  --logo-dark-display: inline;   /* lime logo shown on dark */
+  --logo-light-display: none;    /* dark logo hidden on dark */
+}
+
+/* ============================================================
+   Dark mode (explicit) — mirrors the :root defaults so a subtree
+   can be pinned to dark even when an ancestor is data-theme="light"
+   (e.g. broadcast / OBS surfaces that must not follow the app theme).
+   ============================================================ */
+
+[data-theme="dark"] {
+  --color-bg: #000000;
+  --color-surface: #111111;
+  --color-surface-2: #1a1a1a;
+  --color-surface-3: #222222;
+
+  --color-primary: #b3ff00;
+  --color-primary-text: #000000;
+  --color-accent: #b3ff00;
+  --color-secondary: #3a5af8;
+
+  --color-text: #ffffff;
+  --color-text-primary: #ffffff;
+  --color-text-muted: #888888;
+  --color-text-secondary: #888888;
+
+  --color-neutral: #2a2a2a;
+  --color-border: #2a2a2a;
+
+  --shadow-1: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-2: 0 4px 16px rgba(0, 0, 0, 0.6);
+
+  --logo-dark-display: inline;
+  --logo-light-display: none;
+}
+
+/* ============================================================
+   Light mode overrides
+   ============================================================ */
+
+[data-theme="light"] {
+  /* Original Football OS palette */
+  --color-bg: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-2: #f5f5f5;
+  --color-surface-3: #ebebeb;
+
+  --color-primary: #212121;
+  --color-primary-text: #eff0a3;
+  --color-accent: #eff0a3;
+  --color-secondary: #cfdeca;
+
+  --color-text: #212121;
+  --color-text-primary: #212121;
+  --color-text-muted: #6b7280;
+  --color-text-secondary: #6b7280;
+
+  --color-neutral: #d8dfe9;
+  --color-border: #d8dfe9;
+
+  --shadow-1: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-2: 0 4px 16px rgba(0, 0, 0, 0.12);
+
+  --logo-dark-display: none;     /* lime logo hidden on light */
+  --logo-light-display: inline;  /* dark logo shown on light */
+}
