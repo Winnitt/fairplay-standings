@@ -155,9 +155,30 @@ body {
 
 .col-num {
   width: var(--space-12);
-  text-align: right;
+  
 }
 
+/* M */
+.standings th:nth-child(3),
+.standings td:nth-child(3) {
+  width: 80px;
+  text-align: right;
+  padding-left: 13px;
+}
+
+/* FP */
+.standings th:nth-child(4),
+.standings td:nth-child(4) {
+  width: 55px;
+  padding-left: 16px;
+}
+
+/* AVG */
+.standings th:nth-child(5),
+.standings td:nth-child(5) {
+  width: 95px;
+  padding-left: 16px;
+}
 .rank {
   font-family: var(--font-family-display);
   font-size: var(--font-size-xl);

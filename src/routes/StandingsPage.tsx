@@ -59,7 +59,7 @@ function Standings({ gender }: { gender: 'men' | 'women' }) {
                     </td>
                     <td className="col-num stat">{team.matches}</td>
                     <td className="col-num stat">{team.fairplay_points}</td>
-                    <td className="col-num stat stat--hero">{Number(team.avg_fp).toFixed(3)}</td>
+                    <td className="col-num stat stat--hero">{Number(team.avg_fp).toFixed(2)}</td>
                   </tr>
                 ))}
               </tbody>
