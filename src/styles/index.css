@@ -201,6 +201,7 @@ body {
   height: var(--space-8);
   object-fit: contain;
   flex-shrink: 0;
+  margin-left: 8px; /* Increase to 10px or 12px if needed */
 }
 
 .team-logo--text {
