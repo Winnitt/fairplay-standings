@@ -360,3 +360,34 @@ body {
   height: var(--space-6);
   width: auto;
 }
+@media (max-width: 480px) {
+  .standings th:nth-child(2),
+  .standings td:nth-child(2) {
+    width: 50%;
+  }
+
+  .standings th:nth-child(3),
+  .standings td:nth-child(3) {
+    width: 40px;
+  }
+
+  .standings th:nth-child(4),
+  .standings td:nth-child(4) {
+    width: 40px;
+  }
+
+  .standings th:nth-child(5),
+  .standings td:nth-child(5) {
+    width: 60px;
+  }
+
+  .team-full {
+    font-size: 9px;
+  }
+}
+@media (max-width: 480px) {
+  .standings th:nth-child(5),
+  .standings td:nth-child(5) {
+    width: 16vw;
+  }
+}
